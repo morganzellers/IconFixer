@@ -10,7 +10,7 @@ import PhotosUI
 
 struct ContentView: View {
     @State private var selectedPhotoItem: PhotosPickerItem?
-    @State private var imageData: Data?
+    @State private var image: UIImage?
     
     var body: some View {
         ZStack {
@@ -19,11 +19,13 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
-                if let imageData = imageData, let uiImage = UIImage(data: imageData) {
-                    Image(uiImage: uiImage)
+                if let image = image {
+                    Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
                 }
+                
+                Spacer()
                 
                 PhotosPicker(
                     selection: $selectedPhotoItem,
@@ -31,12 +33,20 @@ struct ContentView: View {
                     photoLibrary: .shared()) {
                         Image(systemName: "plus")
                             .font(Font.largeTitle)
+                            .fontWeight(.heavy)
                             .foregroundColor(.white)
                     }
                     .onChange(of: selectedPhotoItem) { newItem in
                         if let newItem = newItem {
                             Task {
-                                imageData = try? await newItem.loadTransferable(type: Data.self)
+                                guard let imageData = try? await newItem.loadTransferable(type: Data.self),
+                                      let uiImage = UIImage(data: imageData),
+                                      let resizedImage = ImageProcessor.resize(from: uiImage),
+                                      let noAlphaImage = ImageProcessor.removeAlphaChannel(from: resizedImage) else {
+                                    return
+                                }
+                                
+                                image = noAlphaImage
                             }
                         }
                     }

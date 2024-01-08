@@ -11,6 +11,7 @@
 		CD92DC572B4B7A9A001961FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92DC562B4B7A9A001961FB /* ContentView.swift */; };
 		CD92DC592B4B7A9C001961FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD92DC582B4B7A9C001961FB /* Assets.xcassets */; };
 		CD92DC5C2B4B7A9C001961FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD92DC5B2B4B7A9C001961FB /* Preview Assets.xcassets */; };
+		CD92DC632B4B8CE7001961FB /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92DC622B4B8CE7001961FB /* ImageProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CD92DC562B4B7A9A001961FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD92DC582B4B7A9C001961FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD92DC5B2B4B7A9C001961FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD92DC622B4B8CE7001961FB /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				CD92DC542B4B7A9A001961FB /* IconFixerApp.swift */,
+				CD92DC622B4B8CE7001961FB /* ImageProcessor.swift */,
 				CD92DC562B4B7A9A001961FB /* ContentView.swift */,
 				CD92DC582B4B7A9C001961FB /* Assets.xcassets */,
 				CD92DC5A2B4B7A9C001961FB /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD92DC572B4B7A9A001961FB /* ContentView.swift in Sources */,
+				CD92DC632B4B8CE7001961FB /* ImageProcessor.swift in Sources */,
 				CD92DC552B4B7A9A001961FB /* IconFixerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
