@@ -12,7 +12,34 @@
 		CD92DC592B4B7A9C001961FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD92DC582B4B7A9C001961FB /* Assets.xcassets */; };
 		CD92DC5C2B4B7A9C001961FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD92DC5B2B4B7A9C001961FB /* Preview Assets.xcassets */; };
 		CD92DC632B4B8CE7001961FB /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92DC622B4B8CE7001961FB /* ImageProcessor.swift */; };
+		CD92DC6B2B4B9A86001961FB /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92DC6A2B4B9A86001961FB /* ShareViewController.swift */; };
+		CD92DC6E2B4B9A86001961FB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD92DC6C2B4B9A86001961FB /* MainInterface.storyboard */; };
+		CD92DC722B4B9A86001961FB /* IconFixerShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CD92DC682B4B9A86001961FB /* IconFixerShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD92DC702B4B9A86001961FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD92DC492B4B7A9A001961FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD92DC672B4B9A86001961FB;
+			remoteInfo = IconFixerShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD92DC762B4B9A86001961FB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CD92DC722B4B9A86001961FB /* IconFixerShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CD92DC512B4B7A9A001961FB /* IconFixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconFixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,10 +48,21 @@
 		CD92DC582B4B7A9C001961FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD92DC5B2B4B7A9C001961FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD92DC622B4B8CE7001961FB /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		CD92DC682B4B9A86001961FB /* IconFixerShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IconFixerShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD92DC6A2B4B9A86001961FB /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		CD92DC6D2B4B9A86001961FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CD92DC6F2B4B9A86001961FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CD92DC4E2B4B7A9A001961FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD92DC652B4B9A86001961FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				CD92DC532B4B7A9A001961FB /* IconFixer */,
+				CD92DC692B4B9A86001961FB /* IconFixerShareExtension */,
 				CD92DC522B4B7A9A001961FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				CD92DC512B4B7A9A001961FB /* IconFixer.app */,
+				CD92DC682B4B9A86001961FB /* IconFixerShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +110,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CD92DC692B4B9A86001961FB /* IconFixerShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CD92DC6A2B4B9A86001961FB /* ShareViewController.swift */,
+				CD92DC6C2B4B9A86001961FB /* MainInterface.storyboard */,
+				CD92DC6F2B4B9A86001961FB /* Info.plist */,
+			);
+			path = IconFixerShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,15 +130,34 @@
 				CD92DC4D2B4B7A9A001961FB /* Sources */,
 				CD92DC4E2B4B7A9A001961FB /* Frameworks */,
 				CD92DC4F2B4B7A9A001961FB /* Resources */,
+				CD92DC762B4B9A86001961FB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CD92DC712B4B9A86001961FB /* PBXTargetDependency */,
 			);
 			name = IconFixer;
 			productName = IconFixer;
 			productReference = CD92DC512B4B7A9A001961FB /* IconFixer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CD92DC672B4B9A86001961FB /* IconFixerShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD92DC732B4B9A86001961FB /* Build configuration list for PBXNativeTarget "IconFixerShareExtension" */;
+			buildPhases = (
+				CD92DC642B4B9A86001961FB /* Sources */,
+				CD92DC652B4B9A86001961FB /* Frameworks */,
+				CD92DC662B4B9A86001961FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IconFixerShareExtension;
+			productName = IconFixerShareExtension;
+			productReference = CD92DC682B4B9A86001961FB /* IconFixerShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +170,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					CD92DC502B4B7A9A001961FB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CD92DC672B4B9A86001961FB = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -119,6 +191,7 @@
 			projectRoot = "";
 			targets = (
 				CD92DC502B4B7A9A001961FB /* IconFixer */,
+				CD92DC672B4B9A86001961FB /* IconFixerShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +203,14 @@
 			files = (
 				CD92DC5C2B4B7A9C001961FB /* Preview Assets.xcassets in Resources */,
 				CD92DC592B4B7A9C001961FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD92DC662B4B9A86001961FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD92DC6E2B4B9A86001961FB /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +227,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD92DC642B4B9A86001961FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD92DC6B2B4B9A86001961FB /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD92DC712B4B9A86001961FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD92DC672B4B9A86001961FB /* IconFixerShareExtension */;
+			targetProxy = CD92DC702B4B9A86001961FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD92DC6C2B4B9A86001961FB /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD92DC6D2B4B9A86001961FB /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CD92DC5D2B4B7A9C001961FB /* Debug */ = {
@@ -266,12 +374,15 @@
 		CD92DC602B4B7A9C001961FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IconFixer/Preview Content\"";
-				DEVELOPMENT_TEAM = X4LGB8FTDA;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X4LGB8FTDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -286,6 +397,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MZL.MorganZellers.IconFixer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = IconFixerAppStoreProvProf;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,12 +408,15 @@
 		CD92DC612B4B7A9C001961FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IconFixer/Preview Content\"";
-				DEVELOPMENT_TEAM = X4LGB8FTDA;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X4LGB8FTDA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -315,6 +431,58 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MZL.MorganZellers.IconFixer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = IconFixerAppStoreProvProf;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD92DC742B4B9A86001961FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IconFixerShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IconFixerShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MZL.MorganZellers.IconFixer.IconFixerShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD92DC752B4B9A86001961FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IconFixerShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IconFixerShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MZL.MorganZellers.IconFixer.IconFixerShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,6 +506,15 @@
 			buildConfigurations = (
 				CD92DC602B4B7A9C001961FB /* Debug */,
 				CD92DC612B4B7A9C001961FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD92DC732B4B9A86001961FB /* Build configuration list for PBXNativeTarget "IconFixerShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD92DC742B4B9A86001961FB /* Debug */,
+				CD92DC752B4B9A86001961FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
